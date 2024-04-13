@@ -1,5 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+
 from app.core.config import settings
 
 DATABASE_URL = f"mysql+mysqlconnector://{settings.MYSQL_USER}:{settings.MYSQL_PASSWORD}@{settings.MYSQL_HOST}:{settings.MYSQL_PORT}/{settings.MYSQL_DB}"
@@ -15,6 +16,8 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
     Returns:
         SessionLocal: 数据库会话对象。
 """
+
+
 def get_db():
     db = SessionLocal()
     try:

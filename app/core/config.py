@@ -3,7 +3,7 @@ from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
     API_VERSION: str = "1.0.0"
-    CONTACT: dict = {"name": "yejunyu", "email": "", "url": ""}
+    CONTACT: dict = {"name": "yejunyu", "email": "", "url": "https://www.google.com/"}
     ENV: str = "dev"
     if ENV == "dev":
         RELOAD: bool = True
@@ -15,9 +15,9 @@ class Settings(BaseSettings):
 
     MYSQL_HOST: str = "117.72.37.213"
     MYSQL_USER: str = "root"
-    MYSQL_PASSWORD: str = "Bb1387205?"
+    MYSQL_PASSWORD: str = "hp51yYnbQqjBAWSj"
     MYSQL_PORT: int = 3307
-    MYSQL_DB: str = "todolist"
+    MYSQL_DB: str = "test"
 
     class Config:
         env_file = "./.env"
